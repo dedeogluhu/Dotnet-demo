@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineShopping.Entity.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopping.Entity
 {
-    public class Seller
+    public class Seller : IEntity
     {
         public int Id { get; set; }
         public string SellerId { get; set; }

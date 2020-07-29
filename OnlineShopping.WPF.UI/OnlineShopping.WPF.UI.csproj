@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShopping.Entity\OnlineShopping.Entity.csproj">
+      <Project>{ca1a4d25-c598-4ad6-a9ae-0b725813b9d3}</Project>
+      <Name>OnlineShopping.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineShopping.ORM\OnlineShopping.ORM.csproj">
+      <Project>{ec00b7b8-71d3-4d95-9e7a-a531f226681a}</Project>
+      <Name>OnlineShopping.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,10 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessLayers\CustomerDal.cs" />
+    <Compile Include="DataAccessLayers\OrderDal.cs" />
+    <Compile Include="DataAccessLayers\OrderDetailsDal.cs" />
     <Compile Include="DataAccessLayers\ProductDal.cs" />
+    <Compile Include="DataAccessLayers\SellerDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\Utilities.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShopping.Entity\OnlineShopping.Entity.csproj">
+      <Project>{ca1a4d25-c598-4ad6-a9ae-0b725813b9d3}</Project>
+      <Name>OnlineShopping.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
