@@ -11,10 +11,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
     {
         public static bool Delete(int id)
         {
-            SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "prc_Products_Delete";
+            SqlCommand sqlCommand = new SqlCommand("prc_Products_Delete", Utilities.Connection);
             sqlCommand.CommandType = CommandType.StoredProcedure;
-            sqlCommand.Connection = Utilities.Connection;
             sqlCommand.Parameters.AddWithValue("@Id", id);
 
             return Utilities.ExecuteNonQuery(sqlCommand);
@@ -41,6 +39,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
             Utilities.OpenConnection(sqlCommand);
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            Utilities.CloseConnection(sqlCommand);
 
             while (sqlDataReader.Read())
             {
