@@ -1,29 +1,73 @@
 ﻿using OnlineShopping.Entity;
+using OnlineShopping.ORM.Tools;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace OnlineShopping.ORM.DataAccessLayers
 {
     public static class ProductDal
     {
-        public static bool Delete(Product entity)
+        public static bool Delete(int id)
         {
-            throw new NotImplementedException();
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.CommandText = "prc_Products_Delete";
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Connection = Utilities.Connection;
+            sqlCommand.Parameters.AddWithValue("@Id", id);
+
+            return Utilities.ExecuteNonQuery(sqlCommand);
         }
 
         public static bool Insert(Product entity)
         {
-            throw new NotImplementedException();
+            SqlCommand sqlCommand = new SqlCommand("prc_Products_Insert", Utilities.Connection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@ProductName", entity.ProductName);
+            sqlCommand.Parameters.AddWithValue("@UnitPrice",entity.UnitPrice);
+            sqlCommand.Parameters.AddWithValue("@StockAmount", entity.StockAmount);
+
+            return Utilities.ExecuteNonQuery(sqlCommand);
         }
 
         public static List<Product> Select()
         {
-            throw new NotImplementedException();
+            SqlCommand sqlCommand = new SqlCommand("prc_Products_Select", Utilities.Connection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            List<Product> products = new List<Product>();
+
+            Utilities.OpenConnection(sqlCommand);
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            while (sqlDataReader.Read())
+            {
+                Product product = new Product
+                {
+                    Id = Convert.ToInt32(sqlDataReader["Id"]),
+                    ProductName = sqlDataReader["ProductName"].ToString(),
+                    UnitPrice = Convert.ToDecimal(sqlDataReader["UnitPrice"]),
+                    StockAmount = Convert.ToInt32(sqlDataReader["StockAmount"])
+                };
+
+                products.Add(product);
+            }
+
+            return products;
         }
 
         public static bool Update(Product entity)
         {
-            throw new NotImplementedException();
+            SqlCommand sqlCommand = new SqlCommand("prc_Products_Update", Utilities.Connection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@Id", entity.Id);
+            sqlCommand.Parameters.AddWithValue("@ProductName", entity.ProductName);
+            sqlCommand.Parameters.AddWithValue("@UnitPrice", entity.UnitPrice);
+            sqlCommand.Parameters.AddWithValue("@StockAmount", entity.StockAmount);
+
+            return Utilities.ExecuteNonQuery(sqlCommand);
         }
     }
 }
