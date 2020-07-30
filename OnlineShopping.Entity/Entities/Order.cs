@@ -12,6 +12,6 @@ namespace OnlineShopping.Entity
         public int Id { get; set; }
         public int SellerId { get; set; }
         public int CustomerId { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime SaleDate { get; set; }
     }
 }
