@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopping.Entity
 {
-    public class OrderDetails : IEntity
+    public class OrderDetail : IEntity
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }
