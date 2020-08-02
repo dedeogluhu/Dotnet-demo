@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineShopping.WinForms.UI.ValidationForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,9 @@ namespace OnlineShopping.WinForms.UI
         private void ParentForm_Load(object sender, EventArgs e)
         {
             SetMenuStripVisibilityFalse();
+            SellerCustomerChooseForm sellerCustomerChooseForm = new SellerCustomerChooseForm();
+            sellerCustomerChooseForm.MdiParent = this;
+            sellerCustomerChooseForm.Show();
         }
 
         public void SetMenuStripVisibilityFalse()

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OnlineShopping.WinForms.UI.ValidationForms
 {
-    public partial class CustomerLoginForm : Form
+    public partial class SellerCustomerChooseForm : Form
     {
-        public CustomerLoginForm()
+        public SellerCustomerChooseForm()
         {
             InitializeComponent();
         }
