@@ -33,7 +33,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
                     CompanyName = sqlDataReader["CompanyName"].ToString(),
                     SellerId = sqlDataReader["SellerId"].ToString(),
                     Password = sqlDataReader["Password"].ToString(),
-                    Cash = Convert.ToDecimal(sqlDataReader["Cash"])
+                    Cash = Convert.ToDecimal(sqlDataReader["Cash"]),
+                    isActive = Convert.ToBoolean(sqlDataReader["isActive"])
                 };
 
                 sellers.Add(seller);

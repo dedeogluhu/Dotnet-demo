@@ -1,6 +1,6 @@
-﻿namespace OnlineShopping.WinForms.UI
+﻿namespace OnlineShopping.WinForms.UI.ValidationForms
 {
-    partial class Form1
+    partial class CustomerLoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // CustomerLoginForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(382, 553);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "CustomerLoginForm";
+            this.Text = "CustomerLoginForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

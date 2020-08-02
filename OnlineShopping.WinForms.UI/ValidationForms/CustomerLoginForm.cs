@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OnlineShopping.WinForms.UI
+namespace OnlineShopping.WinForms.UI.ValidationForms
 {
-    public partial class Form1 : Form
+    public partial class CustomerLoginForm : Form
     {
-        public Form1()
+        public CustomerLoginForm()
         {
             InitializeComponent();
         }

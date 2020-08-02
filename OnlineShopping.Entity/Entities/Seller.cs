@@ -14,5 +14,6 @@ namespace OnlineShopping.Entity
         public string Password { get; set; }
         public string CompanyName { get; set; }
         public decimal Cash { get; set; }
+        public bool isActive { get; set; }
     }
 }

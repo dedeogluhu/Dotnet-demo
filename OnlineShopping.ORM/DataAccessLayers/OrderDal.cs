@@ -32,7 +32,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
                     Id = Convert.ToInt32(sqlDataReader["Id"]),
                     CustomerId = Convert.ToInt32(sqlDataReader["CustomerId"]),
                     SellerId = Convert.ToInt32(sqlDataReader["SellerId"]),
-                    SaleDate = Convert.ToDateTime(sqlDataReader["SaleDate"])
+                    SaleDate = Convert.ToDateTime(sqlDataReader["SaleDate"]),
+                    isActive = Convert.ToBoolean(sqlDataReader["isActive"])
                 };
 
                 orders.Add(order);

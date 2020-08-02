@@ -13,5 +13,6 @@ namespace OnlineShopping.Entity
         public string ProductName { get; set; }
         public decimal UnitPrice { get; set; }
         public int StockAmount { get; set; }
+        public bool isActive { get; set; }
     }
 }

@@ -32,7 +32,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
                     OrderId = Convert.ToInt32(sqlDataReader["OrderId"]),
                     Price = Convert.ToDecimal(sqlDataReader["Price"]),
                     ProductId = Convert.ToInt32(sqlDataReader["ProductId"]),
-                    Quantity = Convert.ToInt32(sqlDataReader["Quantity"])
+                    Quantity = Convert.ToInt32(sqlDataReader["Quantity"]),
+                    isActive = Convert.ToBoolean(sqlDataReader["isActive"])
                 };
 
                 orderDetails.Add(orderDetail);

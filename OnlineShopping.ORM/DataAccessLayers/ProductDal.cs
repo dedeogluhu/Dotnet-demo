@@ -49,7 +49,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
                     Id = Convert.ToInt32(sqlDataReader["Id"]),
                     ProductName = sqlDataReader["ProductName"].ToString(),
                     UnitPrice = Convert.ToDecimal(sqlDataReader["UnitPrice"]),
-                    StockAmount = Convert.ToInt32(sqlDataReader["StockAmount"])
+                    StockAmount = Convert.ToInt32(sqlDataReader["StockAmount"]),
+                    isActive = Convert.ToBoolean(sqlDataReader["isActive"])
                 };
 
                 products.Add(product);

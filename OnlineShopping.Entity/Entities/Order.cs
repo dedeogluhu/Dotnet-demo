@@ -13,5 +13,6 @@ namespace OnlineShopping.Entity
         public int SellerId { get; set; }
         public int CustomerId { get; set; }
         public DateTime SaleDate { get; set; }
+        public bool isActive { get; set; }
     }
 }
