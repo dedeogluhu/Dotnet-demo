@@ -1,4 +1,5 @@
 ﻿using OnlineShopping.Entity;
+using OnlineShopping.ORM.Interfaces;
 using OnlineShopping.ORM.Tools;
 using System;
 using System.Collections.Generic;

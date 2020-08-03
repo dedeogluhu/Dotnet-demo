@@ -8,5 +8,6 @@ namespace OnlineShopping.ORM.Interfaces
 {
     public interface IEntityDal
     {
+
     }
 }

@@ -125,6 +125,10 @@
     <None Include="System\App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OnlineShopping.Business\OnlineShopping.Business.csproj">
+      <Project>{17b84044-cef8-4743-8807-046bb7f0c7d5}</Project>
+      <Name>OnlineShopping.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OnlineShopping.Entity\OnlineShopping.Entity.csproj">
       <Project>{ca1a4d25-c598-4ad6-a9ae-0b725813b9d3}</Project>
       <Name>OnlineShopping.Entity</Name>
