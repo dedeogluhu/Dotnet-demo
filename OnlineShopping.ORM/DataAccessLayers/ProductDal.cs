@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace OnlineShopping.ORM.DataAccessLayers
 {
-    public static class ProductDal
+    public class ProductDal : IEntityDal
     {
         public static bool Delete(int id)
         {

@@ -1,4 +1,5 @@
 ﻿using OnlineShopping.Entity;
+using OnlineShopping.ORM.Interfaces;
 using OnlineShopping.ORM.Tools;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopping.ORM.DataAccessLayers
 {
-    public static class CustomerDal
+    public class CustomerDal : IEntityDal
     {
         public static List<Customer> Select()
         {

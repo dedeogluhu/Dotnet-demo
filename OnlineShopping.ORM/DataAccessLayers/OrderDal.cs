@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopping.ORM.DataAccessLayers
 {
-    public static class OrderDal
+    public class OrderDal : IEntityDal
     {
         public static List<Order> Select()
         {

@@ -46,6 +46,7 @@
     <Compile Include="DataAccessLayers\OrderDetailsDal.cs" />
     <Compile Include="DataAccessLayers\ProductDal.cs" />
     <Compile Include="DataAccessLayers\SellerDal.cs" />
+    <Compile Include="Interfaces\IEntityDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\Utilities.cs" />
   </ItemGroup>
