@@ -72,6 +72,18 @@
     <Compile Include="ValidationForms\SellerCustomerChooseForm.Designer.cs">
       <DependentUpon>SellerCustomerChooseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValidationForms\SellerLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidationForms\SellerLoginForm.Designer.cs">
+      <DependentUpon>SellerLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationForms\SellerSignupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidationForms\SellerSignupForm.Designer.cs">
+      <DependentUpon>SellerSignupForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="OperationForms\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ValidationForms\SellerCustomerChooseForm.resx">
       <DependentUpon>SellerCustomerChooseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidationForms\SellerLoginForm.resx">
+      <DependentUpon>SellerLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidationForms\SellerSignupForm.resx">
+      <DependentUpon>SellerSignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
