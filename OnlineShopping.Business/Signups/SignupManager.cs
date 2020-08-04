@@ -1,4 +1,5 @@
-﻿using OnlineShopping.Entity;
+﻿using OnlineShopping.Business.Tools;
+using OnlineShopping.Entity;
 using OnlineShopping.ORM.DataAccessLayers;
 using System;
 using System.Collections.Generic;
@@ -10,50 +11,35 @@ namespace OnlineShopping.Business.Signups
 {
     public class SignupManager
     {
-        public static bool CustomerExistence(Customer customer)
+        public static CustomerSignupState CustomerSignup(Customer customer)
         {
+            //Look for customer existence
             foreach (Customer item in CustomerDal.Select())
             {
-                if (customer.CustomerId == item.CustomerId) return true;
+                if (customer.CustomerId == item.CustomerId) return CustomerSignupState.IdExists;
             }
 
-            return false;
+            bool result = CustomerDal.Insert(customer);
+
+            if (result) return CustomerSignupState.Successful;
+            
+            return CustomerSignupState.Failed;
         }
 
-        public static bool SellerExistence(Seller seller)
+        public static SellerSignupState SellerSignup(Seller seller)
         {
+            //Look for seller existence
             foreach (Seller item in SellerDal.Select())
             {
-                if (seller.SellerId == item.SellerId || seller.CompanyName == item.CompanyName) return true;
+                if (seller.SellerId == item.SellerId) return SellerSignupState.IdExists;
+                if (seller.CompanyName == item.CompanyName) return SellerSignupState.CompanyNameExists;
             }
 
-            return false;
-        }
+            bool result = SellerDal.Insert(seller);
 
-        public static string CustomerSignup(Customer customer)
-        {
-            bool customerExists = CustomerExistence(customer);
+            if (result) return SellerSignupState.Successful;
 
-            bool customerAdded = false;
-
-            if (customerExists == false) customerAdded = CustomerDal.Insert(customer);
-            else return "This Id already exists";
-
-            if (customerAdded) return "Signup successful";
-            else return "Signup failed";
-        }
-
-        public static string SellerSignup(Seller seller)
-        {
-            bool sellerExists= SellerExistence(seller);
-
-            bool sellerAdded = false;
-
-            if (sellerExists == false) sellerAdded = SellerDal.Insert(seller);
-            else return "This seller already exists";
-
-            if (sellerAdded) return "Signup successful";
-            else return "Signup failed";
+            return SellerSignupState.Failed;
         }
     }
 }

@@ -14,32 +14,22 @@ namespace OnlineShopping.Business.Validations
     {
         public static bool ValidateCustomer(string id, string password)
         {
-            bool foundEntity = false;
-
             foreach (Customer customer in CustomerDal.Select())
             {
-                if (customer.CustomerId == id && customer.Password == password)
-                {
-                    foundEntity = true;
-                }
+                if (customer.CustomerId == id && customer.Password == password) return true;
             }
 
-            return foundEntity;
+            return false;
         }
 
         public static bool ValidateSeller(string id, string password)
         {
-            bool foundEntity = false;
-
             foreach (Seller seller in SellerDal.Select())
             {
-                if (seller.SellerId == id && seller.Password == password)
-                {
-                    foundEntity = true;
-                }
+                if (seller.SellerId == id && seller.Password == password) return true;
             }
 
-            return foundEntity;
+            return false;
         }
     }
 }
