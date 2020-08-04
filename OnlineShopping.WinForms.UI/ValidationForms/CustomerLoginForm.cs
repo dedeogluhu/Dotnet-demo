@@ -16,5 +16,13 @@ namespace OnlineShopping.WinForms.UI.ValidationForms
         {
             InitializeComponent();
         }
+
+        private void btnCustomerLoginToSignup_Click(object sender, EventArgs e)
+        {
+            CustomerSignupForm customerSignupForm = new CustomerSignupForm();
+            customerSignupForm.MdiParent = this.MdiParent;
+            customerSignupForm.Show();
+            this.Hide();
+        }
     }
 }

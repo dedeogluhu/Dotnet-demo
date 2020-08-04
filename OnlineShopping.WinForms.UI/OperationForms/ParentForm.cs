@@ -21,20 +21,12 @@ namespace OnlineShopping.WinForms.UI
 
         private void ParentForm_Load(object sender, EventArgs e)
         {
-            SetMenuStripVisibilityFalse();
+            mspParentForm.Visible = false;
+            mspSellerParentForm.Visible = false;
+
             SellerCustomerChooseForm sellerCustomerChooseForm = new SellerCustomerChooseForm();
             sellerCustomerChooseForm.MdiParent = this;
             sellerCustomerChooseForm.Show();
-        }
-
-        public void SetMenuStripVisibilityFalse()
-        {
-            mspParentForm.Visible = false;
-        }
-        
-        public void SetMenuStripVisibilityTrue()
-        {
-            mspParentForm.Visible = true;
         }
     }
 }

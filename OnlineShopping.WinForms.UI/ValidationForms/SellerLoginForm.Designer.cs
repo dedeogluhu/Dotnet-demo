@@ -54,6 +54,7 @@
             this.btnSellerLoginToSignup.TabIndex = 1;
             this.btnSellerLoginToSignup.Text = "Signup";
             this.btnSellerLoginToSignup.UseVisualStyleBackColor = true;
+            this.btnSellerLoginToSignup.Click += new System.EventHandler(this.btnSellerLoginToSignup_Click);
             // 
             // tbxSellerLoginId
             // 
@@ -110,6 +111,7 @@
             this.Controls.Add(this.lblSellerLoginToSignup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SellerLoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SellerLoginForm";
             this.ResumeLayout(false);
             this.PerformLayout();

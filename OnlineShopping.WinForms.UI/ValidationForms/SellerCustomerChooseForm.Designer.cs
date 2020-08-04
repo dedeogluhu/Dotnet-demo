@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnChooseCustomerLogin = new System.Windows.Forms.Button();
+            this.btnChooseSellerLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnChooseCustomerLogin
             // 
-            this.button1.Location = new System.Drawing.Point(96, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 79);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Customer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnChooseCustomerLogin.Location = new System.Drawing.Point(96, 127);
+            this.btnChooseCustomerLogin.Name = "btnChooseCustomerLogin";
+            this.btnChooseCustomerLogin.Size = new System.Drawing.Size(192, 79);
+            this.btnChooseCustomerLogin.TabIndex = 0;
+            this.btnChooseCustomerLogin.Text = "Customer";
+            this.btnChooseCustomerLogin.UseVisualStyleBackColor = true;
+            this.btnChooseCustomerLogin.Click += new System.EventHandler(this.btnChooseCustomerLogin_Click);
             // 
-            // button2
+            // btnChooseSellerLogin
             // 
-            this.button2.Location = new System.Drawing.Point(96, 322);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 79);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Seller";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnChooseSellerLogin.Location = new System.Drawing.Point(96, 322);
+            this.btnChooseSellerLogin.Name = "btnChooseSellerLogin";
+            this.btnChooseSellerLogin.Size = new System.Drawing.Size(192, 79);
+            this.btnChooseSellerLogin.TabIndex = 1;
+            this.btnChooseSellerLogin.Text = "Seller";
+            this.btnChooseSellerLogin.UseVisualStyleBackColor = true;
+            this.btnChooseSellerLogin.Click += new System.EventHandler(this.btnChooseSellerLogin_Click);
             // 
             // SellerCustomerChooseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 553);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnChooseSellerLogin);
+            this.Controls.Add(this.btnChooseCustomerLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -69,7 +71,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnChooseCustomerLogin;
+        private System.Windows.Forms.Button btnChooseSellerLogin;
     }
 }

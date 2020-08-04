@@ -58,6 +58,7 @@
             this.btnCustomerSignupToLogin.TabIndex = 1;
             this.btnCustomerSignupToLogin.Text = "Login";
             this.btnCustomerSignupToLogin.UseVisualStyleBackColor = true;
+            this.btnCustomerSignupToLogin.Click += new System.EventHandler(this.btnCustomerSignupToLogin_Click);
             // 
             // btnCustomerSignup
             // 
@@ -150,6 +151,7 @@
             this.Controls.Add(this.lblCustomerSignupToLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CustomerSignupForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerSignupForm";
             this.ResumeLayout(false);
             this.PerformLayout();
