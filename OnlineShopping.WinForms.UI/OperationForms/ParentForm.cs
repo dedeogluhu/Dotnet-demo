@@ -18,6 +18,18 @@ namespace OnlineShopping.WinForms.UI
         public Customer CustomerLoggedIn { get; set; }
         public Seller SellerLoggedIn { get; set; }
 
+        public void CustomerLogin(Customer customer)
+        {
+            CustomerLoggedIn = customer;
+            mspParentForm.Visible = true;
+        }
+
+        public void SellerLogin(Seller seller)
+        {
+            SellerLoggedIn = seller;
+            mspSellerParentForm.Visible = true;
+        }
+
         public ParentForm()
         {
             InitializeComponent();

@@ -12,24 +12,24 @@ namespace OnlineShopping.Business.Validations
 {
     public class Validator : IValidator
     {
-        public static bool ValidateCustomer(string id, string password)
+        public static Customer ValidateCustomer(string id, string password)
         {
             foreach (Customer customer in CustomerDal.Select())
             {
-                if (customer.CustomerId == id && customer.Password == password) return true;
+                if (customer.CustomerId == id && customer.Password == password) return customer;
             }
 
-            return false;
+            return null;
         }
 
-        public static bool ValidateSeller(string id, string password)
+        public static Seller ValidateSeller(string id, string password)
         {
             foreach (Seller seller in SellerDal.Select())
             {
-                if (seller.SellerId == id && seller.Password == password) return true;
+                if (seller.SellerId == id && seller.Password == password) return seller;
             }
 
-            return false;
+            return null;
         }
     }
 }

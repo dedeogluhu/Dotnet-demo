@@ -96,6 +96,7 @@
             this.btnSellerLogin.TabIndex = 6;
             this.btnSellerLogin.Text = "Login";
             this.btnSellerLogin.UseVisualStyleBackColor = true;
+            this.btnSellerLogin.Click += new System.EventHandler(this.btnSellerLogin_Click);
             // 
             // SellerLoginForm
             // 
