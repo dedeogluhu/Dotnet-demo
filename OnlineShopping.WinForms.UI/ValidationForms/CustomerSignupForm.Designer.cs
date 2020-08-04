@@ -38,7 +38,7 @@
             this.tbxCustomerSignupId = new System.Windows.Forms.TextBox();
             this.tbxCustomerSignupPassword = new System.Windows.Forms.TextBox();
             this.tbxCustomerSignupFirstName = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbxCustomerSignupLastName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCustomerSignupToLogin
@@ -62,12 +62,13 @@
             // 
             // btnCustomerSignup
             // 
-            this.btnCustomerSignup.Location = new System.Drawing.Point(110, 459);
+            this.btnCustomerSignup.Location = new System.Drawing.Point(116, 459);
             this.btnCustomerSignup.Name = "btnCustomerSignup";
             this.btnCustomerSignup.Size = new System.Drawing.Size(140, 46);
             this.btnCustomerSignup.TabIndex = 2;
             this.btnCustomerSignup.Text = "Signup";
             this.btnCustomerSignup.UseVisualStyleBackColor = true;
+            this.btnCustomerSignup.Click += new System.EventHandler(this.btnCustomerSignup_Click);
             // 
             // lblCustomerSignupId
             // 
@@ -126,19 +127,19 @@
             this.tbxCustomerSignupFirstName.Size = new System.Drawing.Size(311, 22);
             this.tbxCustomerSignupFirstName.TabIndex = 9;
             // 
-            // textBox4
+            // tbxCustomerSignupLastName
             // 
-            this.textBox4.Location = new System.Drawing.Point(36, 399);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(311, 22);
-            this.textBox4.TabIndex = 10;
+            this.tbxCustomerSignupLastName.Location = new System.Drawing.Point(36, 399);
+            this.tbxCustomerSignupLastName.Name = "tbxCustomerSignupLastName";
+            this.tbxCustomerSignupLastName.Size = new System.Drawing.Size(311, 22);
+            this.tbxCustomerSignupLastName.TabIndex = 10;
             // 
             // CustomerSignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 553);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbxCustomerSignupLastName);
             this.Controls.Add(this.tbxCustomerSignupFirstName);
             this.Controls.Add(this.tbxCustomerSignupPassword);
             this.Controls.Add(this.tbxCustomerSignupId);
@@ -170,6 +171,6 @@
         private System.Windows.Forms.TextBox tbxCustomerSignupId;
         private System.Windows.Forms.TextBox tbxCustomerSignupPassword;
         private System.Windows.Forms.TextBox tbxCustomerSignupFirstName;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbxCustomerSignupLastName;
     }
 }

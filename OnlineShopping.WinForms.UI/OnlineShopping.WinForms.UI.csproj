@@ -46,11 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OperationForms\Customer\CustomerAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationForms\Customer\CustomerAccountForm.Designer.cs">
+      <DependentUpon>CustomerAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationForms\Customer\CustomerShopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationForms\Customer\CustomerShopForm.Designer.cs">
+      <DependentUpon>CustomerShopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationForms\Customer\CustomerShoppingCartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationForms\Customer\CustomerShoppingCartForm.Designer.cs">
+      <DependentUpon>CustomerShoppingCartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperationForms\ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OperationForms\ParentForm.Designer.cs">
       <DependentUpon>ParentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationForms\Seller\SellerAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationForms\Seller\SellerAccountForm.Designer.cs">
+      <DependentUpon>SellerAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationForms\Seller\SellerAddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationForms\Seller\SellerAddProductForm.Designer.cs">
+      <DependentUpon>SellerAddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationForms\Seller\SellerProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationForms\Seller\SellerProductsForm.Designer.cs">
+      <DependentUpon>SellerProductsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="System\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +120,26 @@
     <Compile Include="ValidationForms\SellerSignupForm.Designer.cs">
       <DependentUpon>SellerSignupForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OperationForms\Customer\CustomerAccountForm.resx">
+      <DependentUpon>CustomerAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationForms\Customer\CustomerShopForm.resx">
+      <DependentUpon>CustomerShopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationForms\Customer\CustomerShoppingCartForm.resx">
+      <DependentUpon>CustomerShoppingCartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OperationForms\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationForms\Seller\SellerAccountForm.resx">
+      <DependentUpon>SellerAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationForms\Seller\SellerAddProductForm.resx">
+      <DependentUpon>SellerAddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationForms\Seller\SellerProductsForm.resx">
+      <DependentUpon>SellerProductsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

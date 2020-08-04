@@ -1,4 +1,5 @@
-﻿using OnlineShopping.WinForms.UI.ValidationForms;
+﻿using OnlineShopping.Entity;
+using OnlineShopping.WinForms.UI.ValidationForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,9 @@ namespace OnlineShopping.WinForms.UI
 {
     public partial class ParentForm : Form
     {
+        public Customer CustomerLoggedIn { get; set; }
+        public Seller SellerLoggedIn { get; set; }
+
         public ParentForm()
         {
             InitializeComponent();

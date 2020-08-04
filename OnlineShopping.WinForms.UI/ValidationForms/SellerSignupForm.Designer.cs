@@ -114,6 +114,7 @@
             this.btnSellerSignup.TabIndex = 8;
             this.btnSellerSignup.Text = "Signup";
             this.btnSellerSignup.UseVisualStyleBackColor = true;
+            this.btnSellerSignup.Click += new System.EventHandler(this.btnSellerSignup_Click);
             // 
             // SellerSignupForm
             // 
