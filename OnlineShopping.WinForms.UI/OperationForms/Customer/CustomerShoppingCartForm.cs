@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OnlineShopping.Entity;
+using OnlineShopping.ORM.DataAccessLayers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,41 @@ namespace OnlineShopping.WinForms.UI.OperationForms
 {
     public partial class CustomerShoppingCartForm : Form
     {
-        public CustomerShoppingCartForm()
+        Customer customerLoggedIn;
+        List<Product> customerCart;
+        ParentForm mainForm;
+
+        public CustomerShoppingCartForm(Customer customer, List<Product> customerCartItems)
         {
             InitializeComponent();
+            customerLoggedIn = customer;
+            customerCart = customerCartItems;
+            mainForm = (ParentForm)MdiParent;
+        }
+
+        private void CustomerShoppingCartForm_Load(object sender, EventArgs e)
+        {
+            dgwCustomerShoppingCart.DataSource = customerCart; 
+        }
+
+        private void btnCustomerCartBuy_Click(object sender, EventArgs e)
+        {
+            decimal sumOfCart = 0;
+
+            foreach (Product product in customerCart)
+            {
+                sumOfCart += product.UnitPrice;
+            }
+
+            customerLoggedIn.Cash -= sumOfCart;
+            CustomerDal.Update(customerLoggedIn);
+
+            lblCustomerCartCashDisplay.Text = customerLoggedIn.Cash.ToString();
+
+            MessageBox.Show($"{customerCart.Count()}Items bought");
+
+            customerCart.Clear();
+            mainForm.ClearCart();
         }
     }
 }

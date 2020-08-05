@@ -17,13 +17,17 @@ namespace OnlineShopping.WinForms.UI
     {
         public Customer CustomerLoggedIn { get; set; }
         public Seller SellerLoggedIn { get; set; }
-        public List<Product> ShoppingCart { get; set; } = new List<Product>();
+        public List<Product> ShoppingCart { get;private set; } = new List<Product>();
 
         public void AddToCart(Product product)
         {
             ShoppingCart.Add(product);
         }
 
+        public void ClearCart()
+        {
+            ShoppingCart.Clear();
+        }
         public void CustomerLogin(Customer customer)
         {
             CustomerLoggedIn = customer;
