@@ -41,8 +41,6 @@ namespace OnlineShopping.ORM.DataAccessLayers
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
-            Utilities.CloseConnection(sqlCommand);
-
             while (sqlDataReader.Read())
             {
                 Product product = new Product
@@ -56,6 +54,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
 
                 products.Add(product);
             }
+
+            Utilities.CloseConnection(sqlCommand);
 
             return products;
         }

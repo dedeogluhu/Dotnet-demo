@@ -22,9 +22,7 @@ namespace OnlineShopping.ORM.DataAccessLayers
 
             Utilities.OpenConnection(sqlCommand);
 
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-            Utilities.CloseConnection(sqlCommand);
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();      
 
             while (sqlDataReader.Read())
             {
@@ -41,6 +39,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
 
                 customers.Add(customer);
             }
+
+            Utilities.CloseConnection(sqlCommand);
 
             return customers;
         }

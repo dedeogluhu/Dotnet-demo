@@ -60,26 +60,27 @@
             // shopToolStripMenuItem
             // 
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.shopToolStripMenuItem.Text = "Shop";
             // 
             // shoppingCartToolStripMenuItem
             // 
             this.shoppingCartToolStripMenuItem.Name = "shoppingCartToolStripMenuItem";
-            this.shoppingCartToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.shoppingCartToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.shoppingCartToolStripMenuItem.Text = "Shopping Cart";
             // 
             // myAccountToolStripMenuItem
             // 
             this.myAccountToolStripMenuItem.Name = "myAccountToolStripMenuItem";
-            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.myAccountToolStripMenuItem.Text = "My Account";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // mspSellerParentForm
             // 
@@ -90,9 +91,9 @@
             this.addAProductToolStripMenuItem,
             this.myAccountToolStripMenuItem1,
             this.logoutToolStripMenuItem1});
-            this.mspSellerParentForm.Location = new System.Drawing.Point(1274, 0);
+            this.mspSellerParentForm.Location = new System.Drawing.Point(1242, 0);
             this.mspSellerParentForm.Name = "mspSellerParentForm";
-            this.mspSellerParentForm.Size = new System.Drawing.Size(124, 722);
+            this.mspSellerParentForm.Size = new System.Drawing.Size(156, 722);
             this.mspSellerParentForm.TabIndex = 3;
             this.mspSellerParentForm.Text = "menuStrip1";
             // 
@@ -117,8 +118,9 @@
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(111, 24);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(143, 24);
             this.logoutToolStripMenuItem1.Text = "Logout";
+            this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // ParentForm
             // 

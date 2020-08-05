@@ -24,8 +24,6 @@ namespace OnlineShopping.ORM.DataAccessLayers
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
-            Utilities.CloseConnection(sqlCommand);
-
             while (sqlDataReader.Read())
             {
                 OrderDetail orderDetail = new OrderDetail
@@ -39,6 +37,8 @@ namespace OnlineShopping.ORM.DataAccessLayers
 
                 orderDetails.Add(orderDetail);
             }
+
+            Utilities.CloseConnection(sqlCommand);
 
             return orderDetails;
         }

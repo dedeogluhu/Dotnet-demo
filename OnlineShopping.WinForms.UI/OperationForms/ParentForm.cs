@@ -44,5 +44,27 @@ namespace OnlineShopping.WinForms.UI
             sellerCustomerChooseForm.MdiParent = this;
             sellerCustomerChooseForm.Show();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerLoggedIn = null;
+
+            SellerCustomerChooseForm sellerCustomerChooseForm = new SellerCustomerChooseForm();
+            sellerCustomerChooseForm.MdiParent = this;
+            sellerCustomerChooseForm.Show();
+
+            mspParentForm.Visible = false;
+        }
+
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SellerLoggedIn = null;
+
+            SellerCustomerChooseForm sellerCustomerChooseForm = new SellerCustomerChooseForm();
+            sellerCustomerChooseForm.MdiParent = this;
+            sellerCustomerChooseForm.Show();
+
+            mspSellerParentForm.Visible = false;
+        }
     }
 }
