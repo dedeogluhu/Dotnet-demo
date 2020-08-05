@@ -15,6 +15,8 @@ namespace OnlineShopping.WinForms.UI.ValidationForms
 {
     public partial class CustomerLoginForm : Form
     {
+        
+
         public CustomerLoginForm()
         {
             InitializeComponent();
@@ -32,8 +34,12 @@ namespace OnlineShopping.WinForms.UI.ValidationForms
         {
             Customer customer = Validator.ValidateCustomer(tbxCustomerLoginId.Text, tbxCustomerLoginPassword.Text);
 
+            ParentForm mainForm = (ParentForm)MdiParent;
+
             if (customer != null)
             {
+                mainForm.CustomerLogin(customer);
+                this.Hide();
                 //Login
             }
             else

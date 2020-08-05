@@ -31,9 +31,12 @@ namespace OnlineShopping.WinForms.UI.ValidationForms
         {
             Seller seller = Validator.ValidateSeller(tbxSellerLoginId.Text, tbxSellerLoginPassword.Text);
 
+            ParentForm mainForm = (ParentForm)MdiParent;
+
             if(seller != null)
             {
-                //Seller Login
+                mainForm.SellerLogin(seller);
+                this.Hide();
             }
             else
             {
