@@ -23,7 +23,7 @@ namespace OnlineShopping.WinForms.UI.OperationForms
 
         private void SellerProductsForm_Load(object sender, EventArgs e)
         {
-            dgwSellerProducts.DataSource = ProductDal.Select().Where(p => p.SellerId == sellerLoggedIn.Id).Where(p => p.StockAmount > 0);
+            dgwSellerProducts.DataSource = ProductDal.Select().Where(p => p.SellerId == sellerLoggedIn.Id);//.Where(p => p.StockAmount > 0);
         }
 
         private void btnSellerProductsRemove_Click(object sender, EventArgs e)

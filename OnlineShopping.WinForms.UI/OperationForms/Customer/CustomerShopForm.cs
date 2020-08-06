@@ -32,7 +32,7 @@ namespace OnlineShopping.WinForms.UI.OperationForms
         private void CustomerShopForm_Load(object sender, EventArgs e)
         {
             lblCustomerShopCashDisplay.Text = customerLoggedIn.Cash.ToString();
-            dgwCustomerShopProducts.DataSource = ProductDal.Select().Where(p => p.StockAmount > 0);
+            dgwCustomerShopProducts.DataSource = ProductDal.Select();//.Where(p => p.StockAmount > 0);
         }
     }
 }
