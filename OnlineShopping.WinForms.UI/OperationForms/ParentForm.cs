@@ -1,4 +1,5 @@
 ﻿using OnlineShopping.Entity;
+using OnlineShopping.WinForms.UI.OperationForms;
 using OnlineShopping.WinForms.UI.ValidationForms;
 using System;
 using System.Collections.Generic;
@@ -59,22 +60,64 @@ namespace OnlineShopping.WinForms.UI
         {
             CustomerLoggedIn = null;
 
+            mspParentForm.Visible = false;
+
             SellerCustomerChooseForm sellerCustomerChooseForm = new SellerCustomerChooseForm();
             sellerCustomerChooseForm.MdiParent = this;
-            sellerCustomerChooseForm.Show();
-
-            mspParentForm.Visible = false;
+            sellerCustomerChooseForm.Show();       
         }
 
         private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             SellerLoggedIn = null;
 
+            mspSellerParentForm.Visible = false;
+
             SellerCustomerChooseForm sellerCustomerChooseForm = new SellerCustomerChooseForm();
             sellerCustomerChooseForm.MdiParent = this;
-            sellerCustomerChooseForm.Show();
+            sellerCustomerChooseForm.Show();    
+        }
 
-            mspSellerParentForm.Visible = false;
+        private void tspCustomerShop_Click(object sender, EventArgs e)
+        {
+            CustomerShopForm customerShopForm = new CustomerShopForm(CustomerLoggedIn);
+            customerShopForm.MdiParent = this;
+            customerShopForm.Show();
+        }
+
+        private void tspCustomerShoppingCart_Click(object sender, EventArgs e)
+        {
+            CustomerShoppingCartForm customerShoppingCartForm = new CustomerShoppingCartForm(CustomerLoggedIn, ShoppingCart);
+            customerShoppingCartForm.MdiParent = this;
+            customerShoppingCartForm.Show();
+        }
+
+        private void tspCustomerAccount_Click(object sender, EventArgs e)
+        {
+            CustomerAccountForm customerAccountForm = new CustomerAccountForm(CustomerLoggedIn);
+            customerAccountForm.MdiParent = this;
+            customerAccountForm.Show();
+        }
+
+        private void tspSellerProducts_Click(object sender, EventArgs e)
+        {
+            SellerProductsForm sellerProductsForm = new SellerProductsForm(SellerLoggedIn);
+            sellerProductsForm.MdiParent = this;
+            sellerProductsForm.Show();
+        }
+
+        private void tspSellerAddProduct_Click(object sender, EventArgs e)
+        {
+            SellerAddProductForm sellerAddProductForm = new SellerAddProductForm(SellerLoggedIn);
+            sellerAddProductForm.MdiParent = this;
+            sellerAddProductForm.Show();
+        }
+
+        private void tspSellerAccount_Click(object sender, EventArgs e)
+        {
+            SellerAccountForm sellerAccountForm = new SellerAccountForm(SellerLoggedIn);
+            sellerAccountForm.MdiParent = this;
+            sellerAccountForm.Show();
         }
     }
 }
