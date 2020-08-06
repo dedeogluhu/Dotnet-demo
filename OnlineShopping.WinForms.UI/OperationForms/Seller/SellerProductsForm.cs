@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OnlineShopping.Entity;
+using OnlineShopping.ORM.DataAccessLayers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,25 @@ namespace OnlineShopping.WinForms.UI.OperationForms
 {
     public partial class SellerProductsForm : Form
     {
-        public SellerProductsForm()
+        Seller sellerLoggedIn;
+        public SellerProductsForm(Seller seller)
         {
             InitializeComponent();
+            sellerLoggedIn = seller;
+        }
+
+        private void SellerProductsForm_Load(object sender, EventArgs e)
+        {
+            dgwSellerProducts.DataSource = ProductDal.Select().Where(p => p.SellerId == sellerLoggedIn.Id).Where(p => p.StockAmount > 0);
+        }
+
+        private void btnSellerProductsRemove_Click(object sender, EventArgs e)
+        {
+            ProductDal.Delete((Product)dgwSellerProducts.CurrentRow.DataBoundItem);
+
+            dgwSellerProducts.DataSource = ProductDal.Select().Where(p => p.SellerId == sellerLoggedIn.Id).Where(p => p.StockAmount > 0);
+
+            MessageBox.Show("Product Deleted");
         }
     }
 }

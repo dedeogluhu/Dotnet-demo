@@ -39,6 +39,12 @@ namespace OnlineShopping.WinForms.UI.OperationForms
             {
                 sumOfCart += product.UnitPrice;
 
+                Seller seller = (Seller)SellerDal.Select().Where(s => s.Id == product.SellerId);
+
+                seller.Cash += product.UnitPrice;
+
+                SellerDal.Update(seller);
+
                 Order order = new Order
                 {
                     CustomerId = customerLoggedIn.Id,
@@ -48,15 +54,15 @@ namespace OnlineShopping.WinForms.UI.OperationForms
 
                 OrderDal.Insert(order);
 
-                OrderDetail orderDetail = new OrderDetail
-                {
-                    OrderId = order.Id,
-                    Price = product.UnitPrice,
-                    ProductId = product.Id,
-                    Quantity = 1
-                };
+                //OrderDetail orderDetail = new OrderDetail
+                //{
+                //    OrderId = order.Id,
+                //    Price = product.UnitPrice,
+                //    ProductId = product.Id,
+                //    Quantity = 1
+                //};
 
-                OrderDetailsDal.Insert(orderDetail);
+                //OrderDetailsDal.Insert(orderDetail);
             }
 
             customerLoggedIn.Cash -= sumOfCart;

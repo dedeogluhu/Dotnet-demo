@@ -31,6 +31,11 @@ namespace OnlineShopping.ORM.DataAccessLayers
             return Utilities.ExecuteNonQuery(sqlCommand);
         }
 
+        public static void Delete(object dataBoundItem)
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<Product> Select()
         {
             SqlCommand sqlCommand = new SqlCommand("prc_Products_Select", Utilities.Connection);
