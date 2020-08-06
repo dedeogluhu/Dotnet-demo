@@ -60,28 +60,28 @@
             // tspCustomerShop
             // 
             this.tspCustomerShop.Name = "tspCustomerShop";
-            this.tspCustomerShop.Size = new System.Drawing.Size(143, 24);
+            this.tspCustomerShop.Size = new System.Drawing.Size(111, 24);
             this.tspCustomerShop.Text = "Shop";
             this.tspCustomerShop.Click += new System.EventHandler(this.tspCustomerShop_Click);
             // 
             // tspCustomerShoppingCart
             // 
             this.tspCustomerShoppingCart.Name = "tspCustomerShoppingCart";
-            this.tspCustomerShoppingCart.Size = new System.Drawing.Size(143, 24);
+            this.tspCustomerShoppingCart.Size = new System.Drawing.Size(111, 24);
             this.tspCustomerShoppingCart.Text = "Shopping Cart";
             this.tspCustomerShoppingCart.Click += new System.EventHandler(this.tspCustomerShoppingCart_Click);
             // 
             // tspCustomerAccount
             // 
             this.tspCustomerAccount.Name = "tspCustomerAccount";
-            this.tspCustomerAccount.Size = new System.Drawing.Size(143, 24);
+            this.tspCustomerAccount.Size = new System.Drawing.Size(111, 24);
             this.tspCustomerAccount.Text = "My Account";
             this.tspCustomerAccount.Click += new System.EventHandler(this.tspCustomerAccount_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -94,30 +94,30 @@
             this.tspSellerAddProduct,
             this.tspSellerAccount,
             this.logoutToolStripMenuItem1});
-            this.mspSellerParentForm.Location = new System.Drawing.Point(1242, 0);
+            this.mspSellerParentForm.Location = new System.Drawing.Point(1274, 0);
             this.mspSellerParentForm.Name = "mspSellerParentForm";
-            this.mspSellerParentForm.Size = new System.Drawing.Size(156, 722);
+            this.mspSellerParentForm.Size = new System.Drawing.Size(124, 722);
             this.mspSellerParentForm.TabIndex = 3;
             this.mspSellerParentForm.Text = "menuStrip1";
             // 
             // tspSellerProducts
             // 
             this.tspSellerProducts.Name = "tspSellerProducts";
-            this.tspSellerProducts.Size = new System.Drawing.Size(143, 24);
+            this.tspSellerProducts.Size = new System.Drawing.Size(111, 24);
             this.tspSellerProducts.Text = "My Products";
             this.tspSellerProducts.Click += new System.EventHandler(this.tspSellerProducts_Click);
             // 
             // tspSellerAddProduct
             // 
             this.tspSellerAddProduct.Name = "tspSellerAddProduct";
-            this.tspSellerAddProduct.Size = new System.Drawing.Size(143, 24);
+            this.tspSellerAddProduct.Size = new System.Drawing.Size(111, 24);
             this.tspSellerAddProduct.Text = "Add a Product";
             this.tspSellerAddProduct.Click += new System.EventHandler(this.tspSellerAddProduct_Click);
             // 
             // tspSellerAccount
             // 
             this.tspSellerAccount.Name = "tspSellerAccount";
-            this.tspSellerAccount.Size = new System.Drawing.Size(143, 24);
+            this.tspSellerAccount.Size = new System.Drawing.Size(111, 24);
             this.tspSellerAccount.Text = "My Account";
             this.tspSellerAccount.Click += new System.EventHandler(this.tspSellerAccount_Click);
             // 
@@ -132,6 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1398, 722);
             this.Controls.Add(this.mspParentForm);
             this.Controls.Add(this.mspSellerParentForm);
