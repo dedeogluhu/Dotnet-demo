@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.gbxUpdateInfo = new System.Windows.Forms.GroupBox();
-            this.gbxDepositCash = new System.Windows.Forms.GroupBox();
-            this.lblUpdateCustomerFirstName = new System.Windows.Forms.Label();
-            this.lblUpdateCustomerLastName = new System.Windows.Forms.Label();
-            this.lblUpdateCustomerId = new System.Windows.Forms.Label();
-            this.lblUpdateCustomerPassword = new System.Windows.Forms.Label();
-            this.tbxCustomerDepositCash = new System.Windows.Forms.TextBox();
-            this.btnCustomerDepositCash = new System.Windows.Forms.Button();
-            this.btnUpdateCustomer = new System.Windows.Forms.Button();
-            this.tbxUpdateCustomerPassword = new System.Windows.Forms.TextBox();
-            this.tbxUpdateCustomerId = new System.Windows.Forms.TextBox();
-            this.tbxUpdateCustomerLastName = new System.Windows.Forms.TextBox();
             this.tbxUpdateCustomerFirstName = new System.Windows.Forms.TextBox();
+            this.tbxUpdateCustomerLastName = new System.Windows.Forms.TextBox();
+            this.tbxUpdateCustomerId = new System.Windows.Forms.TextBox();
+            this.tbxUpdateCustomerPassword = new System.Windows.Forms.TextBox();
+            this.btnUpdateCustomer = new System.Windows.Forms.Button();
+            this.lblUpdateCustomerPassword = new System.Windows.Forms.Label();
+            this.lblUpdateCustomerId = new System.Windows.Forms.Label();
+            this.lblUpdateCustomerLastName = new System.Windows.Forms.Label();
+            this.lblUpdateCustomerFirstName = new System.Windows.Forms.Label();
+            this.gbxDepositCash = new System.Windows.Forms.GroupBox();
+            this.btnCustomerDepositCash = new System.Windows.Forms.Button();
+            this.tbxCustomerDepositCash = new System.Windows.Forms.TextBox();
             this.gbxCustomerAccountCashDisplay = new System.Windows.Forms.GroupBox();
             this.lblCustomerAccountCashDisplay = new System.Windows.Forms.Label();
             this.gbxUpdateInfo.SuspendLayout();
@@ -66,69 +66,33 @@
             this.gbxUpdateInfo.TabStop = false;
             this.gbxUpdateInfo.Text = "Update Account";
             // 
-            // gbxDepositCash
+            // tbxUpdateCustomerFirstName
             // 
-            this.gbxDepositCash.Controls.Add(this.btnCustomerDepositCash);
-            this.gbxDepositCash.Controls.Add(this.tbxCustomerDepositCash);
-            this.gbxDepositCash.Location = new System.Drawing.Point(550, 13);
-            this.gbxDepositCash.Name = "gbxDepositCash";
-            this.gbxDepositCash.Size = new System.Drawing.Size(238, 153);
-            this.gbxDepositCash.TabIndex = 1;
-            this.gbxDepositCash.TabStop = false;
-            this.gbxDepositCash.Text = "Deposit Cash";
+            this.tbxUpdateCustomerFirstName.Location = new System.Drawing.Point(42, 65);
+            this.tbxUpdateCustomerFirstName.Name = "tbxUpdateCustomerFirstName";
+            this.tbxUpdateCustomerFirstName.Size = new System.Drawing.Size(426, 22);
+            this.tbxUpdateCustomerFirstName.TabIndex = 9;
             // 
-            // lblUpdateCustomerFirstName
+            // tbxUpdateCustomerLastName
             // 
-            this.lblUpdateCustomerFirstName.AutoSize = true;
-            this.lblUpdateCustomerFirstName.Location = new System.Drawing.Point(42, 34);
-            this.lblUpdateCustomerFirstName.Name = "lblUpdateCustomerFirstName";
-            this.lblUpdateCustomerFirstName.Size = new System.Drawing.Size(80, 17);
-            this.lblUpdateCustomerFirstName.TabIndex = 0;
-            this.lblUpdateCustomerFirstName.Text = "First Name:";
+            this.tbxUpdateCustomerLastName.Location = new System.Drawing.Point(42, 132);
+            this.tbxUpdateCustomerLastName.Name = "tbxUpdateCustomerLastName";
+            this.tbxUpdateCustomerLastName.Size = new System.Drawing.Size(426, 22);
+            this.tbxUpdateCustomerLastName.TabIndex = 8;
             // 
-            // lblUpdateCustomerLastName
+            // tbxUpdateCustomerId
             // 
-            this.lblUpdateCustomerLastName.AutoSize = true;
-            this.lblUpdateCustomerLastName.Location = new System.Drawing.Point(42, 101);
-            this.lblUpdateCustomerLastName.Name = "lblUpdateCustomerLastName";
-            this.lblUpdateCustomerLastName.Size = new System.Drawing.Size(80, 17);
-            this.lblUpdateCustomerLastName.TabIndex = 1;
-            this.lblUpdateCustomerLastName.Text = "Last Name:";
+            this.tbxUpdateCustomerId.Location = new System.Drawing.Point(42, 199);
+            this.tbxUpdateCustomerId.Name = "tbxUpdateCustomerId";
+            this.tbxUpdateCustomerId.Size = new System.Drawing.Size(426, 22);
+            this.tbxUpdateCustomerId.TabIndex = 7;
             // 
-            // lblUpdateCustomerId
+            // tbxUpdateCustomerPassword
             // 
-            this.lblUpdateCustomerId.AutoSize = true;
-            this.lblUpdateCustomerId.Location = new System.Drawing.Point(42, 168);
-            this.lblUpdateCustomerId.Name = "lblUpdateCustomerId";
-            this.lblUpdateCustomerId.Size = new System.Drawing.Size(25, 17);
-            this.lblUpdateCustomerId.TabIndex = 2;
-            this.lblUpdateCustomerId.Text = "ID:";
-            // 
-            // lblUpdateCustomerPassword
-            // 
-            this.lblUpdateCustomerPassword.AutoSize = true;
-            this.lblUpdateCustomerPassword.Location = new System.Drawing.Point(42, 235);
-            this.lblUpdateCustomerPassword.Name = "lblUpdateCustomerPassword";
-            this.lblUpdateCustomerPassword.Size = new System.Drawing.Size(73, 17);
-            this.lblUpdateCustomerPassword.TabIndex = 3;
-            this.lblUpdateCustomerPassword.Text = "Password:";
-            // 
-            // tbxCustomerDepositCash
-            // 
-            this.tbxCustomerDepositCash.Location = new System.Drawing.Point(6, 43);
-            this.tbxCustomerDepositCash.Name = "tbxCustomerDepositCash";
-            this.tbxCustomerDepositCash.Size = new System.Drawing.Size(226, 22);
-            this.tbxCustomerDepositCash.TabIndex = 0;
-            // 
-            // btnCustomerDepositCash
-            // 
-            this.btnCustomerDepositCash.Location = new System.Drawing.Point(72, 91);
-            this.btnCustomerDepositCash.Name = "btnCustomerDepositCash";
-            this.btnCustomerDepositCash.Size = new System.Drawing.Size(105, 40);
-            this.btnCustomerDepositCash.TabIndex = 1;
-            this.btnCustomerDepositCash.Text = "Deposit";
-            this.btnCustomerDepositCash.UseVisualStyleBackColor = true;
-            this.btnCustomerDepositCash.Click += new System.EventHandler(this.btnCustomerDepositCash_Click);
+            this.tbxUpdateCustomerPassword.Location = new System.Drawing.Point(42, 266);
+            this.tbxUpdateCustomerPassword.Name = "tbxUpdateCustomerPassword";
+            this.tbxUpdateCustomerPassword.Size = new System.Drawing.Size(426, 22);
+            this.tbxUpdateCustomerPassword.TabIndex = 6;
             // 
             // btnUpdateCustomer
             // 
@@ -140,33 +104,69 @@
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
             this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
             // 
-            // tbxUpdateCustomerPassword
+            // lblUpdateCustomerPassword
             // 
-            this.tbxUpdateCustomerPassword.Location = new System.Drawing.Point(42, 266);
-            this.tbxUpdateCustomerPassword.Name = "tbxUpdateCustomerPassword";
-            this.tbxUpdateCustomerPassword.Size = new System.Drawing.Size(426, 22);
-            this.tbxUpdateCustomerPassword.TabIndex = 6;
+            this.lblUpdateCustomerPassword.AutoSize = true;
+            this.lblUpdateCustomerPassword.Location = new System.Drawing.Point(42, 235);
+            this.lblUpdateCustomerPassword.Name = "lblUpdateCustomerPassword";
+            this.lblUpdateCustomerPassword.Size = new System.Drawing.Size(73, 17);
+            this.lblUpdateCustomerPassword.TabIndex = 3;
+            this.lblUpdateCustomerPassword.Text = "Password:";
             // 
-            // tbxUpdateCustomerId
+            // lblUpdateCustomerId
             // 
-            this.tbxUpdateCustomerId.Location = new System.Drawing.Point(42, 199);
-            this.tbxUpdateCustomerId.Name = "tbxUpdateCustomerId";
-            this.tbxUpdateCustomerId.Size = new System.Drawing.Size(426, 22);
-            this.tbxUpdateCustomerId.TabIndex = 7;
+            this.lblUpdateCustomerId.AutoSize = true;
+            this.lblUpdateCustomerId.Location = new System.Drawing.Point(42, 168);
+            this.lblUpdateCustomerId.Name = "lblUpdateCustomerId";
+            this.lblUpdateCustomerId.Size = new System.Drawing.Size(25, 17);
+            this.lblUpdateCustomerId.TabIndex = 2;
+            this.lblUpdateCustomerId.Text = "ID:";
             // 
-            // tbxUpdateCustomerLastName
+            // lblUpdateCustomerLastName
             // 
-            this.tbxUpdateCustomerLastName.Location = new System.Drawing.Point(42, 132);
-            this.tbxUpdateCustomerLastName.Name = "tbxUpdateCustomerLastName";
-            this.tbxUpdateCustomerLastName.Size = new System.Drawing.Size(426, 22);
-            this.tbxUpdateCustomerLastName.TabIndex = 8;
+            this.lblUpdateCustomerLastName.AutoSize = true;
+            this.lblUpdateCustomerLastName.Location = new System.Drawing.Point(42, 101);
+            this.lblUpdateCustomerLastName.Name = "lblUpdateCustomerLastName";
+            this.lblUpdateCustomerLastName.Size = new System.Drawing.Size(80, 17);
+            this.lblUpdateCustomerLastName.TabIndex = 1;
+            this.lblUpdateCustomerLastName.Text = "Last Name:";
             // 
-            // tbxUpdateCustomerFirstName
+            // lblUpdateCustomerFirstName
             // 
-            this.tbxUpdateCustomerFirstName.Location = new System.Drawing.Point(42, 65);
-            this.tbxUpdateCustomerFirstName.Name = "tbxUpdateCustomerFirstName";
-            this.tbxUpdateCustomerFirstName.Size = new System.Drawing.Size(426, 22);
-            this.tbxUpdateCustomerFirstName.TabIndex = 9;
+            this.lblUpdateCustomerFirstName.AutoSize = true;
+            this.lblUpdateCustomerFirstName.Location = new System.Drawing.Point(42, 34);
+            this.lblUpdateCustomerFirstName.Name = "lblUpdateCustomerFirstName";
+            this.lblUpdateCustomerFirstName.Size = new System.Drawing.Size(80, 17);
+            this.lblUpdateCustomerFirstName.TabIndex = 0;
+            this.lblUpdateCustomerFirstName.Text = "First Name:";
+            // 
+            // gbxDepositCash
+            // 
+            this.gbxDepositCash.Controls.Add(this.btnCustomerDepositCash);
+            this.gbxDepositCash.Controls.Add(this.tbxCustomerDepositCash);
+            this.gbxDepositCash.Location = new System.Drawing.Point(550, 13);
+            this.gbxDepositCash.Name = "gbxDepositCash";
+            this.gbxDepositCash.Size = new System.Drawing.Size(238, 153);
+            this.gbxDepositCash.TabIndex = 1;
+            this.gbxDepositCash.TabStop = false;
+            this.gbxDepositCash.Text = "Deposit Cash";
+            // 
+            // btnCustomerDepositCash
+            // 
+            this.btnCustomerDepositCash.Location = new System.Drawing.Point(72, 91);
+            this.btnCustomerDepositCash.Name = "btnCustomerDepositCash";
+            this.btnCustomerDepositCash.Size = new System.Drawing.Size(105, 40);
+            this.btnCustomerDepositCash.TabIndex = 1;
+            this.btnCustomerDepositCash.Text = "Deposit";
+            this.btnCustomerDepositCash.UseVisualStyleBackColor = true;
+            this.btnCustomerDepositCash.Click += new System.EventHandler(this.btnCustomerDepositCash_Click);
+            // 
+            // tbxCustomerDepositCash
+            // 
+            this.tbxCustomerDepositCash.Location = new System.Drawing.Point(6, 43);
+            this.tbxCustomerDepositCash.Name = "tbxCustomerDepositCash";
+            this.tbxCustomerDepositCash.Size = new System.Drawing.Size(226, 22);
+            this.tbxCustomerDepositCash.TabIndex = 0;
             // 
             // gbxCustomerAccountCashDisplay
             // 
@@ -182,7 +182,7 @@
             // 
             this.lblCustomerAccountCashDisplay.AutoSize = true;
             this.lblCustomerAccountCashDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCustomerAccountCashDisplay.Location = new System.Drawing.Point(87, 75);
+            this.lblCustomerAccountCashDisplay.Location = new System.Drawing.Point(36, 75);
             this.lblCustomerAccountCashDisplay.Name = "lblCustomerAccountCashDisplay";
             this.lblCustomerAccountCashDisplay.Size = new System.Drawing.Size(63, 69);
             this.lblCustomerAccountCashDisplay.TabIndex = 1;
