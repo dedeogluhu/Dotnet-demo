@@ -21,12 +21,12 @@ namespace OnlineShopping.WinForms.UI.OperationForms
         {
             InitializeComponent();
             customerLoggedIn = customer;
-            parentForm = (ParentForm)MdiParent;
+            parentForm = MdiParent as ParentForm; //(ParentForm)
         }
 
         private void btnCustomerShopAddToCart_Click(object sender, EventArgs e)
         {
-            parentForm.AddToCart((Product)dgwCustomerShopProducts.CurrentRow.DataBoundItem);
+            parentForm?.AddToCart((Product)dgwCustomerShopProducts.CurrentRow.DataBoundItem);
         }
 
         private void CustomerShopForm_Load(object sender, EventArgs e)
