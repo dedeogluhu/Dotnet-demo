@@ -26,6 +26,7 @@ namespace OnlineShopping.ORM.DataAccessLayers
             sqlCommand.Parameters.AddWithValue("@ProductName", entity.ProductName);
             sqlCommand.Parameters.AddWithValue("@UnitPrice",entity.UnitPrice);
             sqlCommand.Parameters.AddWithValue("@StockAmount", entity.StockAmount);
+            sqlCommand.Parameters.AddWithValue("@SellerId", entity.SellerId);
 
             return Utilities.ExecuteNonQuery(sqlCommand);
         }
@@ -47,6 +48,7 @@ namespace OnlineShopping.ORM.DataAccessLayers
                 {
                     Id = Convert.ToInt32(sqlDataReader["Id"]),
                     ProductName = sqlDataReader["ProductName"].ToString(),
+                    SellerId = Convert.ToInt32(sqlDataReader["SellerId"]),
                     UnitPrice = Convert.ToDecimal(sqlDataReader["UnitPrice"]),
                     StockAmount = Convert.ToInt32(sqlDataReader["StockAmount"]),
                     isActive = Convert.ToBoolean(sqlDataReader["isActive"])
@@ -66,6 +68,7 @@ namespace OnlineShopping.ORM.DataAccessLayers
             sqlCommand.CommandType = CommandType.StoredProcedure;
             sqlCommand.Parameters.AddWithValue("@Id", entity.Id);
             sqlCommand.Parameters.AddWithValue("@ProductName", entity.ProductName);
+            sqlCommand.Parameters.AddWithValue("@SellerId", entity.SellerId);
             sqlCommand.Parameters.AddWithValue("@UnitPrice", entity.UnitPrice);
             sqlCommand.Parameters.AddWithValue("@StockAmount", entity.StockAmount);
 
