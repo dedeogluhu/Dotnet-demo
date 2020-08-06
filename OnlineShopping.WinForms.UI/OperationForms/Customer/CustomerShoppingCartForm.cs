@@ -38,6 +38,25 @@ namespace OnlineShopping.WinForms.UI.OperationForms
             foreach (Product product in customerCart)
             {
                 sumOfCart += product.UnitPrice;
+
+                Order order = new Order
+                {
+                    CustomerId = customerLoggedIn.Id,
+                    SaleDate = DateTime.Now,
+                    SellerId = product.SellerId
+                };
+
+                OrderDal.Insert(order);
+
+                OrderDetail orderDetail = new OrderDetail
+                {
+                    OrderId = order.Id,
+                    Price = product.UnitPrice,
+                    ProductId = product.Id,
+                    Quantity = 1
+                };
+
+                OrderDetailsDal.Insert(orderDetail);
             }
 
             customerLoggedIn.Cash -= sumOfCart;
