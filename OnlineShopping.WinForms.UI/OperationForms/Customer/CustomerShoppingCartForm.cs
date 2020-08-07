@@ -22,12 +22,15 @@ namespace OnlineShopping.WinForms.UI.OperationForms
         {
             InitializeComponent();
             customerLoggedIn = customer;
-            customerCart = customerCartItems;
-            mainForm = (ParentForm)MdiParent;
+            customerCart = customerCartItems;    
         }
 
         private void CustomerShoppingCartForm_Load(object sender, EventArgs e)
         {
+            mainForm = (ParentForm)MdiParent;
+
+            lblCustomerCartCashDisplay.Text = customerLoggedIn.Cash.ToString();
+
             dgwCustomerShoppingCart.DataSource = customerCart; 
         }
 
@@ -39,7 +42,7 @@ namespace OnlineShopping.WinForms.UI.OperationForms
             {
                 sumOfCart += product.UnitPrice;
 
-                Seller seller = (Seller)SellerDal.Select().Where(s => s.Id == product.SellerId);
+                Seller seller = SellerDal.Select().Where(s => s.Id == product.SellerId).FirstOrDefault();
 
                 seller.Cash += product.UnitPrice;
 

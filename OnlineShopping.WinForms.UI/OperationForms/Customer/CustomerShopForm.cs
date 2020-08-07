@@ -21,7 +21,7 @@ namespace OnlineShopping.WinForms.UI.OperationForms
         {
             InitializeComponent();
             customerLoggedIn = customer;
-            parentForm = MdiParent as ParentForm; //(ParentForm)
+            
         }
 
         private void btnCustomerShopAddToCart_Click(object sender, EventArgs e)
@@ -31,6 +31,8 @@ namespace OnlineShopping.WinForms.UI.OperationForms
 
         private void CustomerShopForm_Load(object sender, EventArgs e)
         {
+            parentForm = MdiParent as ParentForm; //(ParentForm)
+
             lblCustomerShopCashDisplay.Text = customerLoggedIn.Cash.ToString();
             dgwCustomerShopProducts.DataSource = ProductDal.Select();//.Where(p => p.StockAmount > 0);
         }
