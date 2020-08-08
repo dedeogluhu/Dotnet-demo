@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopping.Business.Interfaces
 {
-    public interface IValidator
+    public interface ILoginValidator
     {
     }
 }

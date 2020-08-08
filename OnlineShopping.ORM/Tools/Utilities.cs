@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace OnlineShopping.ORM.Tools
 {
@@ -18,7 +19,7 @@ namespace OnlineShopping.ORM.Tools
             get 
             {
                 if (connection == null)
-                    connection = new SqlConnection(@"server=localhost\SQLEXPRESS;Database=OnlineShopping;integrated security = true");
+                    connection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlExpress"].ToString());
 
                 return connection; 
             }

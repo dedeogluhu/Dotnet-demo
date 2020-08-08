@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineShopping.Business.Validations
+namespace OnlineShopping.Business.LoginValidations
 {
-    public class Validator : IValidator
+    public class LoginValidator : ILoginValidator
     {
         public static Customer ValidateCustomer(string id, string password)
         {

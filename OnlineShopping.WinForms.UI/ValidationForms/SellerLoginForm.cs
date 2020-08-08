@@ -1,13 +1,6 @@
-﻿using OnlineShopping.Business.Validations;
+﻿using OnlineShopping.Business.LoginValidations;
 using OnlineShopping.Entity;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OnlineShopping.WinForms.UI.ValidationForms
@@ -29,7 +22,7 @@ namespace OnlineShopping.WinForms.UI.ValidationForms
 
         private void btnSellerLogin_Click(object sender, EventArgs e)
         {
-            Seller seller = Validator.ValidateSeller(tbxSellerLoginId.Text, tbxSellerLoginPassword.Text);
+            Seller seller = LoginValidator.ValidateSeller(tbxSellerLoginId.Text, tbxSellerLoginPassword.Text);
 
             ParentForm mainForm = (ParentForm)MdiParent;
 
