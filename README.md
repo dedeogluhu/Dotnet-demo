@@ -6,6 +6,10 @@ This is a project that i made to practice using databases and writing backend co
 
 #TODO:
 
+- Adding WPF UI
+
+- Adding Android UI
+
 - Making Public
 
 - Uploading mssql database codes
