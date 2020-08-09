@@ -1,3 +1,2 @@
 # OnlineShoppingDemo
-A basic online shopping clone in winforms
-
+A basic shopping site clone using various simple UIs
