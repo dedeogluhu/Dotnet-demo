@@ -1,2 +1,3 @@
 # OnlineShoppingDemo
-A basic online shopping clone backend
+A basic online shopping clone in winforms
+
