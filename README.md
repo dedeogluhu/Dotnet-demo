@@ -1,8 +1,8 @@
-#ShoppingDemo
+# ShoppingDemo
 
 A basic shopping site clone in a desktop app using various simple UIs
 
-This is a project that i made to practise using databases and writing C# code 
+Directories are all named with Online but they are not using Asp.net nor they are online
 
-I don't plan anyone to use this but i uploaded them anyway
+This is a project that i made to practise using databases and writing C# code 
 
