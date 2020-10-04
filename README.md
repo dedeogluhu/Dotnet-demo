@@ -1,4 +1,4 @@
-# ShoppingDemo
+# DotnetDemo
 
 A basic shopping site clone in a desktop app using various simple UIs
 
